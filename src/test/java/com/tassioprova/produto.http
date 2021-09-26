@@ -1,0 +1,18 @@
+POST http://localhost:8080/produto
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 4,
+  "nome": "iPhone 13",
+  "descricao": "The best",
+  "fotoUrl": "",
+  "dataCadastro": "2021-09-26",
+  "horaCadastro": "14:41:00",
+  "valorUnitario": "8990.99"
+}
+
+###
+
+GET http://localhost:8080/produto/1
+Accept: application/json

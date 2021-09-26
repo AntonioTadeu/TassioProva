@@ -5,11 +5,11 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.ArrayList;
 
-public class produtoRepository {
+public class ProdutoRepository {
 
     private JdbcTemplate jdbcTemplate;
 
-    public produtoRepository(JdbcTemplate jdbcTemplate) {
+    public ProdutoRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 
@@ -27,10 +27,10 @@ public class produtoRepository {
 
     public ArrayList<Produto> searchID(Integer id) throws Exception {
         String sql = "SELECT * FROM produto WHERE id = ?";
-        ArrayList<Produto> searchID = (ArrayList<Produto>) jdbcTemplate.query(sql, new produtoMapper(), id);
+        ArrayList<Produto> searchID = (ArrayList<Produto>) jdbcTemplate.query(sql, new ProdutoMapper(), id);
 
         if (searchID.size() > 0) {
-            return (ArrayList<Produto>) jdbcTemplate.query(sql, new Object[]{id}, new produtoMapper());
+            return (ArrayList<Produto>) jdbcTemplate.query(sql, new Object[]{id}, new ProdutoMapper());
         }
         throw new Exception("Não há produtos com o id inserido.");
     }
