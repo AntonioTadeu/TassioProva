@@ -1,0 +1,22 @@
+GET http://localhost:8080/categoria/1
+Accept: application/json
+
+###
+
+
+GET http://localhost:8080/categoria/1/produto?nome=celular&valorMinimo=1799.90&valorMaximo=2500.0
+Accept: application/json
+
+###
+
+
+GET http://localhost:8080/categoria/1/produto?nome=celular
+Accept: application/json
+
+###
+
+
+GET http://localhost:8080/categoria/1/produto?valorMinimo=1799.0&valorMaximo=2500.0
+Accept: application/json
+
+###
